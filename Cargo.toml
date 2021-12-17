@@ -9,3 +9,19 @@ version = "0.1.0"
 
 [dependencies]
 clap = "2.33.3"
+
+[dependencies.serenity]
+default-features = false
+features = [
+  "builder",
+  "cache",
+  "client",
+  "gateway",
+  "model",
+  "rustls_backend",
+  "unstable_discord_api",
+]
+version = "0.10"
+
+[patch.crates-io]
+serenity = {git = 'https://github.com/serenity-rs/serenity', branch = 'current'}
